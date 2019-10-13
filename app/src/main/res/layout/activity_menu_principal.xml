@@ -6,4 +6,262 @@
     android:layout_height="match_parent"
     tools:context=".TelasJava.MenuPrincipal">
 
+    <TextView
+        android:id="@+id/txt_title_Menu"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:text="@string/txt_title_Menu"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_Menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="25"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/but_AdminUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonAdminUsuario"
+                    android:text="@string/but_AdminUsers"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_CreateUsers"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_weight="60"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonNovoUsuario"
+                    android:text="@string/but_CreateUsers"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="25"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_AdminRoutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonAdminRotas"
+                    android:text="@string/but_AdminRoutes"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_CreateRoutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonNovaRota"
+                    android:text="@string/but_CreateRoutes"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_RegisterUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonEmDesenvolvimento"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_UserMaintenance"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonEmDesenvolvimento"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_RegisterOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonEmDesenvolvimento"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_OrderMaintenance"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/draw_buttons_menu_btc"
+                    android:onClick="OnClickbuttonEmDesenvolvimento"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:layout_editor_absoluteX="124dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

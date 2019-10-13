@@ -4,4 +4,11 @@
     <string name="txt_input_Login" />
     <string name="txt_input_Password" />
     <string name="but_Login">Acessar</string>
+    <string name="but_AdmUsers">Administrar Usuários</string>
+    <string name="but_CreateUsers">Novo Usuário</string>
+    <string name="but_AdminRotas">Administrar Rotas</string>
+    <string name="but_AdminUsers">Administrar Usuários</string>
+    <string name="but_AdminRoutes">Administrar Rotas</string>
+    <string name="but_CreateRoutes">Nova Rota</string>
+    <string name="txt_title_Menu">Menu Principal</string>
 </resources>
