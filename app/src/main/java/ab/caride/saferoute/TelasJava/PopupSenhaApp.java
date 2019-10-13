@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import ab.caride.saferoute.R;
 
@@ -16,6 +17,9 @@ public class PopupSenhaApp extends Activity {
 
     Button but_senha1, but_senha2, but_senha3, but_senha4, but_senha5, but_senha6, but_senha7, but_senha8, but_senha9;
     EditText txt_input_senha;
+    int senha_tamanho;
+    String botao_clicado;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,27 +52,84 @@ public class PopupSenhaApp extends Activity {
         but_senha8 = findViewById(R.id.but_senha_8);
         but_senha9 = findViewById(R.id.but_senha_9);
         txt_input_senha = findViewById(R.id.txt_input_senha);
+        senha_tamanho = 6;
+        botao_clicado = "";
+
+    }
+
+    public void BotaoSelecionado (){
+
+        if(txt_input_senha.getText().equals("")){
+            txt_input_senha.setText(botao_clicado);
+        }else{
+            if(txt_input_senha.length() <= senha_tamanho){
+                txt_input_senha.setText(txt_input_senha.getText() + botao_clicado);
+            }
+            else{
+            }
+        }
     }
 
     public void OnclickbuttonButSenha1(View view){
-
-        String local_value = "1";
-
-        if(txt_input_senha.getText().equals("")){
-            txt_input_senha.setText(local_value);
-        }else{
-            txt_input_senha.setText(txt_input_senha.getText() + local_value);
-        }
+        botao_clicado = "1";
+        BotaoSelecionado();
     }
 
     public void OnclickbuttonButSenha2(View view){
+        botao_clicado = "2";
+        BotaoSelecionado();
+    }
 
-        String local_value = "2";
+    public void OnclickbuttonButSenha3(View view){
+        botao_clicado = "3";
+        BotaoSelecionado();
+    }
 
-        if(txt_input_senha.getText().equals("")){
-            txt_input_senha.setText(local_value);
+    public void OnclickbuttonButSenha4(View view){
+        botao_clicado = "4";
+        BotaoSelecionado();
+    }
+
+    public void OnclickbuttonButSenha5(View view){
+        botao_clicado = "5";
+        BotaoSelecionado();
+    }
+
+    public void OnclickbuttonButSenha6(View view){
+        botao_clicado = "6";
+        BotaoSelecionado();
+    }
+
+    public void OnclickbuttonButSenha7(View view){
+        botao_clicado = "7";
+        BotaoSelecionado();
+    }
+
+    public void OnclickbuttonButSenha8(View view){
+        botao_clicado = "8";
+        BotaoSelecionado();
+    }
+
+
+    public void OnclickbuttonButSenha9(View view){
+        botao_clicado = "9";
+        BotaoSelecionado();
+    }
+
+    public void OnclickbuttonApagar (View view){
+
+        String senha_atual = txt_input_senha.getText().toString();
+
+        if(!senha_atual.isEmpty()){
+            txt_input_senha.setText(senha_atual.substring(0, senha_atual.length() - 1));
         }else{
-            txt_input_senha.setText(txt_input_senha.getText() + local_value);
+            Toast.makeText(this, "Não existe senha digitada!", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+
+
+
+
 }

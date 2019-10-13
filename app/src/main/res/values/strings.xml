@@ -22,4 +22,5 @@
     <string name="but_senha_9">9</string>
     <string name="text_alert_fora_rota">Seu veículo esta fora da rota. digite a senha de segurança</string>
     <string name="txt_input_senha" />
+    <string name="but_senha_erase">-</string>
 </resources>
