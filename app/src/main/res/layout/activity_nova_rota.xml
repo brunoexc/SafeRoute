@@ -36,6 +36,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tempo_1" />
 
+    <Button
+        android:id="@+id/_teste_fora_da_rota"
+        android:layout_width="174dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="OnClickbuttonTesteForaRota"
+        android:text="Teste Fora da Rota"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_popup_btc"
+    tools:context=".TelasJava.PopupSenhaApp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_senha">
+
+        <LinearLayout
+            android:id="@+id/layout_123"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_1"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:onClick="OnclickbuttonButSenha1"
+                    android:text="@string/but_senha_1"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_2"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:onClick="OnclickbuttonButSenha2"
+                    android:text="@string/but_senha_2"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_3"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_3"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_456"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_4"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_4"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_5"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_5"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_6"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_6"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_789"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_7"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_7"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_8"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_8"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/but_senha_9"
+                    android:layout_width="81dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/draw_senhas_popup_buttons"
+                    android:text="@string/but_senha_9"
+                    android:textAlignment="center"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="216dp" />
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_alert_fora_rota"
+        android:layout_width="332dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="249dp"
+        android:text="@string/text_alert_fora_rota"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_input_senha"
+        android:layout_width="329dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Senha 6 Digitos"
+        android:inputType="textPersonName"
+        android:text="@string/txt_input_senha"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_alert_fora_rota" />
+
+</android.support.constraint.ConstraintLayout>

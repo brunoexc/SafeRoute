@@ -11,4 +11,15 @@
     <string name="but_AdminRoutes">Administrar Rotas</string>
     <string name="but_CreateRoutes">Nova Rota</string>
     <string name="txt_title_Menu">Menu Principal</string>
+    <string name="but_senha_1">1</string>
+    <string name="but_senha_2">2</string>
+    <string name="but_senha_3">3</string>
+    <string name="but_senha_4">4</string>
+    <string name="but_senha_5">5</string>
+    <string name="but_senha_6">6</string>
+    <string name="but_senha_7">7</string>
+    <string name="but_senha_8">8</string>
+    <string name="but_senha_9">9</string>
+    <string name="text_alert_fora_rota">Seu veículo esta fora da rota. digite a senha de segurança</string>
+    <string name="txt_input_senha" />
 </resources>

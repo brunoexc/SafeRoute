@@ -3,15 +3,19 @@ package ab.caride.saferoute.TelasJava;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import ab.caride.saferoute.Controladores.UserController;
 import ab.caride.saferoute.R;
 
 public class MainActivity extends AppCompatActivity {
 
     public String input_user, input_password, super_user, super_password;
     public EditText get_user, get_password;
+
+    UserController user_controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
         super_user = "admin"; super_password = "admin";
 
-        //user_controller = new UserController(this);
+        user_controller = new UserController(this);
 
         //helper = new Database(this);
         //db = helper.getWritableDatabase();
     }
 
 
-    public void OnClickbuttonAcessar(){
+    public void OnClickbuttonAcessar(View view){
 
         get_user = (EditText) findViewById(R.id.txt_input_Login);
         input_user = get_user.getText().toString();

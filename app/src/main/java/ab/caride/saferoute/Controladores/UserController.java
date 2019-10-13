@@ -39,6 +39,7 @@ public class UserController {
         //carregarLista();
     }
 
+    /*
     public boolean ReadUser (String user_p, String password_p, Boolean validate_user){
 
         //SQLiteDatabase db = helper.getReadableDatabase();
@@ -71,7 +72,6 @@ public class UserController {
         }
         return validate_user;
     }
-
-
+*/
 
 }
