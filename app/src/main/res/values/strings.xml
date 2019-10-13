@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SafeRoute</string>
+    <string name="txt_title_Inicio">Rota Segura App</string>
+    <string name="txt_input_Login" />
+    <string name="txt_input_Password" />
+    <string name="but_Login">Acessar</string>
+</resources>
