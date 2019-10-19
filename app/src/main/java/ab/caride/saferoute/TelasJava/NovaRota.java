@@ -20,13 +20,15 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.sql.ClientInfoStatus;
 
+import ab.caride.saferoute.Interface.ITarefa_Callback;
 import ab.caride.saferoute.R;
 
-public class NovaRota extends AppCompatActivity {
+public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
 
     Button botao_teste;
     URL url_post;
     TextView retornoURL;
+    public TarefaPost tarefaPost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,60 +56,17 @@ public class NovaRota extends AppCompatActivity {
 
     public void OnClickbuttonEnviaPost (View view){
 
-
-        try {
-            url_post = new URL("http://google.com.br/");
-
-            HttpURLConnection client = (HttpURLConnection) url_post.openConnection();
-
-            String urlParameters = "search?q=Bruno+Caride+Dutra&oq=Bruno+Caride+Dutra&aqs=chrome..69i57j69i60.2354j0j7&sourceid=chrome&ie=UTF-8";
-
-            client.setRequestMethod("POST");
-            client.setRequestProperty("USER-AGENT","Chrome/77.0");
-            client.setRequestProperty("ACCEPT-LANGUAGE","pt-BR, pt, 0.5");
-
-            client.setDoOutput(true);
-            DataOutputStream dStream = new DataOutputStream(client.getOutputStream());
-
-            dStream.writeBytes(urlParameters);
-            dStream.flush();
-            dStream.close();
-
-            int responseCode = client.getResponseCode();
-            String output = "Request URL" + url_post;
-            output += System.getProperty("line.separator") + "Request Paramaeters " + urlParameters;
-            output += System.getProperty("line.separator") + "Response Code " + responseCode;
-
-
-
-            BufferedReader bReader = new BufferedReader(new InputStreamReader(client.getInputStream()));
-            String line = "";
-            StringBuilder responseOutput = new StringBuilder();
-
-            while ((line = bReader.readLine()) != null){
-                responseOutput.append(line);
-            }
-            bReader.close();
-
-            output += System.getProperty("line.separator") + responseOutput.toString();
-
-            retornoURL.setText(output);
-
-            /*
-            OutputStream opsPost = new BufferedOutputStream(client.getOutputStream());
-            writeStream(opsPost);
-            opsPost.flush();
-            opsPost.close();*/
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        tarefaPost =  new TarefaPost();
+        tarefaPost.chamada = 0;
+        tarefaPost.callback = this;
+        tarefaPost.execute("Teste Envio");
 
     }
 
 
+    @Override
+    public void retornoCallback(int code) {
+        Toast.makeText(getApplicationContext(), "Retorno: " + code, Toast.LENGTH_SHORT).show();
+        retornoURL.setText("Retorno: " + code);
+    }
 }
