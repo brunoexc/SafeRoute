@@ -5,6 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,6 +40,25 @@ public class UserController {
         timeNow.setTimeZone(TimeZone.getTimeZone("Brazil/East"));
 
         //carregarLista();
+    }
+
+    public String CriarJson(Users user){
+
+        String json;
+        JSONObject obj = null;
+        try {
+            obj = new JSONObject();
+            obj.put("id", user.id);
+            obj.put("nome", user.name);
+            obj.put("user", user.user);
+            obj.put("senha", user.password);
+            obj.put("ultimaAlteracao", user.ultimaAlteracao);
+        } catch (JSONException e1) {
+            e1.printStackTrace();
+        }
+        json = obj.toString();
+
+        return json;
     }
 
     /*
