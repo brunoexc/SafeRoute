@@ -7,21 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.sql.ClientInfoStatus;
-
+import ab.caride.saferoute.Controladores.UserController;
 import ab.caride.saferoute.Interface.ITarefa_Callback;
 import ab.caride.saferoute.R;
+
+
+
+
+
 
 public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
 
@@ -29,6 +23,7 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
     URL url_post;
     TextView retornoURL;
     public TarefaPost tarefaPost;
+    public UserController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +51,17 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
 
     public void OnClickbuttonEnviaPost (View view){
 
+        controller = new UserController(this);
+
+        //"https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBEu4I72p1g51gwCocF54cRbf2VBvbfD_o"
+
+        //"https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyBEu4I72p1g51gwCocF54cRbf2VBvbfD_o"
+
+
         tarefaPost =  new TarefaPost();
         tarefaPost.chamada = 0;
         tarefaPost.callback = this;
-        tarefaPost.execute("Teste Envio");
+        tarefaPost.execute(controller.CriarJson());
 
     }
 

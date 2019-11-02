@@ -42,17 +42,48 @@ public class UserController {
         //carregarLista();
     }
 
-    public String CriarJson(Users user){
+    /*public void carregarLista() {
+
+        SQLiteDatabase db = helper.getReadableDatabase();
+        try{
+            cursor = db.rawQuery("select * from users", null);
+
+            lista.clear();
+            while (cursor.moveToNext()) {
+
+                Users usuario = new Users();
+                usuario.id = cursor.getInt(cursor.getColumnIndex("id"));
+                usuario.name = cursor.getString(cursor.getColumnIndex("name"));
+                usuario.user  = cursor.getString(cursor.getColumnIndex("user"));
+                usuario.password = cursor.getString(cursor.getColumnIndex("password"));
+                usuario.ultimaAlteracao = cursor.getString(cursor.getColumnIndex("ultimaAlteracao"));
+                lista.add(usuario);
+            }
+            cursor.close();
+        }finally {
+            db.close();
+        }
+    }*/
+
+    public String CriarJson(){
 
         String json;
         JSONObject obj = null;
         try {
-            obj = new JSONObject();
+            /*obj = new JSONObject();
             obj.put("id", user.id);
             obj.put("nome", user.name);
             obj.put("user", user.user);
             obj.put("senha", user.password);
-            obj.put("ultimaAlteracao", user.ultimaAlteracao);
+            obj.put("ultimaAlteracao", user.ultimaAlteracao);*/
+
+
+            obj = new JSONObject();
+            obj.put("id", "1");
+            obj.put("latitude", "111213231");
+            obj.put("longitude", "12313213");
+
+
         } catch (JSONException e1) {
             e1.printStackTrace();
         }
@@ -60,6 +91,47 @@ public class UserController {
 
         return json;
     }
+
+
+    public String APIGoogleGeolocation(){
+
+        String json;
+        JSONObject obj = null;
+        try {
+            /*obj = new JSONObject();
+            obj.put("id", user.id);
+            obj.put("nome", user.name);
+            obj.put("user", user.user);
+            obj.put("senha", user.password);
+            obj.put("ultimaAlteracao", user.ultimaAlteracao);*/
+
+
+            obj = new JSONObject();
+            obj.put("homeMobileCountryCode", 310);
+            obj.put("homeMobileNetworkCode", 410);
+            obj.put("radioType", "gsm");
+            obj.put("carrier", "Vodafone");
+            obj.put("considerIp", "true");
+
+            obj.put("cellTowers", "1");
+            obj.put("wifiAccessPoints", "1");
+
+
+
+
+            obj.put("latitude", "111213231");
+            obj.put("longitude", "12313213");
+
+
+        } catch (JSONException e1) {
+            e1.printStackTrace();
+        }
+        json = obj.toString();
+
+        return json;
+    }
+
+
 
     /*
     public boolean ReadUser (String user_p, String password_p, Boolean validate_user){
