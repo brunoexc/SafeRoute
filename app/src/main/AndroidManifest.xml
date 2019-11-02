@@ -11,8 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TelasJava.PopupSenhaApp"
-            android:theme="@style/AppTheme.PopSenha"/>
+        <service
+            android:name=".Services.PostLocation"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".TelasJava.PopupSenhaApp"
+            android:theme="@style/AppTheme.PopSenha" />
         <activity android:name=".TelasJava.NovaRota" />
         <activity android:name=".TelasJava.MenuPrincipal" />
         <activity android:name=".TelasJava.MainActivity">
@@ -22,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

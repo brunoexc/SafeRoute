@@ -1,21 +1,19 @@
 package ab.caride.saferoute.Classes;
 
-public class Users {
+public class Street {
 
     public int id;
     public String name;
-    public String user;
-    public String password;
-    public String ultimaAlteracao;
-
-    public Users() {}
+    public double lat;
+    public double lng;
 
 
-    public Users(int id, String name, String user, String password) {
+    public Street(int id, String name, double lat, double lng) {
         this.id = id;
         this.name = name;
-        this.user = user;
-        this.password = password;
+        this.lat = lat;
+        this.lng = lng;
+
     }
 
     @Override
@@ -24,6 +22,9 @@ public class Users {
         String print = "id - " + String.valueOf(id) + " - " + String.valueOf(name);
         return print;
     }
+
+
+
 
 
 }

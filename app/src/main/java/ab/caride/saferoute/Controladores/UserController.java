@@ -1,5 +1,6 @@
 package ab.caride.saferoute.Controladores;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,6 +15,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 import ab.caride.saferoute.Classes.Users;
+import ab.caride.saferoute.TelasJava.Database;
 
 public class UserController {
 
@@ -25,6 +27,7 @@ public class UserController {
     Cursor cursor;
     Calendar calendario;
     SimpleDateFormat timeNow;
+    Database helper;
 
 
     public UserController(Context context) {
@@ -92,43 +95,27 @@ public class UserController {
         return json;
     }
 
+    public void SaveUser (String name, String user, String password){
 
-    public String APIGoogleGeolocation(){
+        Users usuario = new Users();
+        usuario.name = name;
+        usuario.user  = user;
+        usuario.password = password;
+//        usuario.ultimaAlteracao = timeNow.format(calendario.getTime());
+        lista_servidor.add(usuario);
 
-        String json;
-        JSONObject obj = null;
-        try {
-            /*obj = new JSONObject();
-            obj.put("id", user.id);
-            obj.put("nome", user.name);
-            obj.put("user", user.user);
-            obj.put("senha", user.password);
-            obj.put("ultimaAlteracao", user.ultimaAlteracao);*/
-
-
-            obj = new JSONObject();
-            obj.put("homeMobileCountryCode", 310);
-            obj.put("homeMobileNetworkCode", 410);
-            obj.put("radioType", "gsm");
-            obj.put("carrier", "Vodafone");
-            obj.put("considerIp", "true");
-
-            obj.put("cellTowers", "1");
-            obj.put("wifiAccessPoints", "1");
-
-
-
-
-            obj.put("latitude", "111213231");
-            obj.put("longitude", "12313213");
-
-
-        } catch (JSONException e1) {
-            e1.printStackTrace();
+        SQLiteDatabase db = helper.getWritableDatabase();
+        try{
+            ContentValues cv = new ContentValues();
+            cv.put("name", usuario.name);
+            cv.put("user", usuario.user);
+            cv.put("password", usuario.password);
+//            cv.put("ultimaAlteracao", usuario.ultimaAlteracao);
+            long id = db.insert("Users", null, cv);
+            usuario.id = (int) id;
+        }finally {
+            db.close();
         }
-        json = obj.toString();
-
-        return json;
     }
 
 
