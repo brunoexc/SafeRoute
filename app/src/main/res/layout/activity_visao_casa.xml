@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasJava.MenuPrincipal">
+    tools:context=".VisaoCasa">
 
     <TextView
-        android:id="@+id/txt_title_Menu"
+        android:id="@+id/txt_title_ICasa"
         android:layout_width="0dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
-        android:text="@string/txt_title_Menu"
+        android:text="@string/txt_title_ICasa"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -35,37 +35,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_title_Menu">
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_ICasa">
 
         <Button
-            android:id="@+id/but_ICasa"
+            android:id="@+id/but_AdminUsers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:background="@drawable/green_btc_button"
-            android:onClick="OnClickbuttonInterfaceCasa"
-            android:text="@string/but_ICasa"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="124dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/but_ICarro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_weight="60"
-            android:background="@drawable/blue_btc_button"
-            android:onClick="OnClickbuttonInterfaceCarro"
-            android:text="@string/but_ICarro"
+            android:background="@drawable/draw_buttons_menu_btc"
+            android:onClick="OnClickbuttonAdminUsuario"
+            android:text="@string/but_AdminUsers"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="18sp"
@@ -74,18 +53,16 @@
         <LinearLayout
             android:layout_width="10dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
 
         <Button
-            android:id="@+id/but_IMonitoramento"
+            android:id="@+id/but_AdminRoutes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:background="@drawable/teal_btc_button"
-            android:onClick="OnClickbuttonInterfaceMonitoramento"
-            android:text="@string/but_IMonitoramento"
+            android:background="@drawable/draw_buttons_menu_btc"
+            android:onClick="OnClickbuttonAdminRotas"
+            android:text="@string/but_AdminRoutes"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="18sp"

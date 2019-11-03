@@ -23,4 +23,21 @@
     <string name="text_alert_fora_rota">Seu veículo esta fora da rota. digite a senha de segurança</string>
     <string name="txt_input_senha" />
     <string name="but_senha_erase">-</string>
+    <string name="but_ICasa">Interface Casa</string>
+    <string name="but_ICarro">Interface Carro</string>
+    <string name="but_IMonitoramento">Interface Monitoramento</string>
+    <string name="txt_title_ICasa">Menu Casa</string>
+    <string name="but_VisualRotas">Consultar / Escolher Rota</string>
+    <string name="txt_title_ICarro">Menu Carro</string>
+    <string name="but_IMonitor">Monitoramento</string>
+
+
+    <string-array name="combo_rotas_str">
+        <item> " "</item>
+        <item> "Jacaraipe x Vitória"</item>
+        <item> "Laranjeiras x Serra Sede"</item>
+        <item> "Cariaciaca x Vila Velha"</item>
+        <item> "Vitória x Carapina"</item>
+    </string-array>
+
 </resources>
