@@ -35,8 +35,7 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
         botao_teste = findViewById(R.id._teste_fora_da_rota);
 
         stController = new StreetController(this);
-
-        //stController.PreencheBase();
+        stController.PreencheBase();
 
     }
 
