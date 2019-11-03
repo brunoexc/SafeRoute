@@ -41,7 +41,7 @@ public class Database extends SQLiteOpenHelper {
                 "CREATE TABLE Rota ("+
                         "id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
                         "name    TEXT NOT NULL,"+
-                        "ruas    TEXT"+
+                        "ruas    INTEGER"+
                         ");"
         );
     }

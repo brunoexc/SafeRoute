@@ -31,8 +31,7 @@ public class StreetController {
         lista = new ArrayList<>();
         lista_servidor = new ArrayList<>();
 
-        //helper = new Database(this.context);
-        //db = helper.getWritableDatabase();
+        helper = new Database(this.context);
 
         calendario = Calendar.getInstance();
         timeNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
