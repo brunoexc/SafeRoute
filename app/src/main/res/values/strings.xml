@@ -76,5 +76,6 @@
     <string name="txt_input_PassRotaUsuario" />
     <string name="txt_input_PassEmergUsuario" />
     <string name="txt_LUL_UserID" />
+    <string name="monitor_parar_IoT">Parar Monitoramento IoT</string>
 
 </resources>

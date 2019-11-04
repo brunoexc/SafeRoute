@@ -1,6 +1,7 @@
 package ab.caride.saferoute.Classes;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import ab.caride.saferoute.Controladores.StreetController;
 import ab.caride.saferoute.Controladores.UserController;
@@ -11,6 +12,7 @@ public class Location extends Thread{
     public UserController user;
     Context context;
     public StreetController SControlller;
+    int contador;
 
     public Location(Context context){
         this.context = context;
@@ -29,6 +31,7 @@ public class Location extends Thread{
         public void run() {
             SControlller = new StreetController(context);
             Street rua;
+            contador = 0;
 
             boolean bool = true;
 
@@ -38,10 +41,16 @@ public class Location extends Thread{
 
                 rua = SControlller.lista.get(car);
                 try {
-                    Thread.sleep(5000);
-                    tarefaPost = new TarefaPost();
-                    tarefaPost.chamada = car;
-                    tarefaPost.execute("Nome: "+ rua.name +" "+"Latitude: "+ rua.lat +" "+" Longitude: "+rua.lng);
+
+
+                    while(contador <= 100) {
+                        Thread.sleep(5000);
+                        tarefaPost = new TarefaPost();
+                        tarefaPost.chamada = car;
+                        tarefaPost.execute("Nome: " + rua.name + " " + "Latitude: " + rua.lat + " " + " Longitude: " + rua.lng);
+
+                        contador++;
+                    }
 
                 } catch (Exception e) {
                     e.printStackTrace();

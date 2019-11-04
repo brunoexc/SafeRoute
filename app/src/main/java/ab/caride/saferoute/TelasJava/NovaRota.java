@@ -24,6 +24,7 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
     public TarefaPost tarefaPost;
     public UserController controller;
     StreetController stController;
+    Intent it;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
         //retornoURL = findViewById(R.id.retornoURL);
 
         botao_teste = findViewById(R.id._teste_fora_da_rota);
+
+        it = new Intent(this, PostLocation.class);
 
         stController = new StreetController(this);
         stController.PreencheBase();
@@ -63,9 +66,13 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
         tarefaPost.callback = this;
         tarefaPost.execute(controller.CriarJson());*/
 
-        Intent it = new Intent(this, PostLocation.class);
+        Toast.makeText(getApplicationContext(), "Iniciado upload de rota! Conferir no Device Explorer", Toast.LENGTH_LONG).show();
         startService(it);
+    }
 
+
+    public void OnClickbuttonPararServiço (View view){
+        Toast.makeText(getApplicationContext(), "Iniciado upload de rota! Conferir no Device Explorer", Toast.LENGTH_LONG).show();
     }
 
 
