@@ -30,8 +30,8 @@ public class VisaoCasa extends AppCompatActivity {
     //ÁREA DO USUÁRIO
     public void OnClickbuttonAdminUsuario (View view){
 
-        // Intent ca_admin_users = new Intent(this, UserAdministrationActivity.class);
-        // startActivity(ca_admin_users);
+        Intent ca_admin_users = new Intent(this, AdministracaoUsuario.class);
+        startActivity(ca_admin_users);
     }
 
 

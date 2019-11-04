@@ -30,7 +30,7 @@ public class NovaRota extends AppCompatActivity implements ITarefa_Callback{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nova_rota);
 
-        retornoURL = findViewById(R.id.retornoURL);
+        //retornoURL = findViewById(R.id.retornoURL);
 
         botao_teste = findViewById(R.id._teste_fora_da_rota);
 

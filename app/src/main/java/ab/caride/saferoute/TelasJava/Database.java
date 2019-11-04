@@ -18,13 +18,13 @@ public class Database extends SQLiteOpenHelper {
 
         Log.i("TAG","onCreate Helper");
         db.execSQL(
-                "CREATE TABLE Users ("+
+                "CREATE TABLE Usuarios ("+
                         "id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
                         "name    TEXT NOT NULL,"+
                         "user    TEXT,"+
                         "passApp    NUMERIC,"+
                         "passSafe    NUMERIC,"+
-                        "passCop     NUMERIC"+
+                        "passEmerg     NUMERIC"+
                         ");"
         );
 

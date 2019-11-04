@@ -15,9 +15,9 @@ public class VisaoCarro extends AppCompatActivity {
         setContentView(R.layout.activity_visao_carro);
     }
 
-    public void OnClickbuttonNovaRota (View view){
+    public void OnClickbuttonRotas (View view){
 
-        Intent ca_nova_rota = new Intent(this, VisaoCarro.class);
+        Intent ca_nova_rota = new Intent(this, ConsultarRota.class);
         startActivity(ca_nova_rota);
     }
 }

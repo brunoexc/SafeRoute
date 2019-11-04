@@ -15,7 +15,7 @@ public class PostLocation extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        local = new Location();
+        local = new Location(this);
         String teste = local.getLocation();
         //local.getLocation();
         Log.i("TAG",teste);

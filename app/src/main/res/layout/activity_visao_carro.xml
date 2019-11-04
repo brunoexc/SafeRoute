@@ -42,6 +42,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="28dp"
             android:background="@drawable/draw_buttons_menu_btc"
+            android:onClick="OnClickbuttonRotas"
             android:text="@string/but_VisualRotas"
             android:textAlignment="center"
             android:textColor="@android:color/white"

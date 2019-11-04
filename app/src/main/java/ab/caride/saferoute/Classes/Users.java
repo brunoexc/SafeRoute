@@ -5,17 +5,21 @@ public class Users {
     public int id;
     public String name;
     public String user;
-    public String password;
-    public String ultimaAlteracao;
+    public String pass_app;
+    public String pass_rota;
+    public String pass_emergencia;
+
 
     public Users() {}
 
 
-    public Users(int id, String name, String user, String password) {
+    public Users(int id, String name, String user, String passapp, String passrota, String passemerg) {
         this.id = id;
         this.name = name;
         this.user = user;
-        this.password = password;
+        this.pass_app = passapp;
+        this.pass_rota = passrota;
+        this.pass_emergencia = passemerg;
     }
 
     @Override

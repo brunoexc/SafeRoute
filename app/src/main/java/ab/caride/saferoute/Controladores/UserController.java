@@ -2,8 +2,11 @@ package ab.caride.saferoute.Controladores;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Button;
+import android.widget.EditText;
 
 
 import org.json.JSONException;
@@ -16,13 +19,13 @@ import java.util.TimeZone;
 
 import ab.caride.saferoute.Classes.Users;
 import ab.caride.saferoute.TelasJava.Database;
+import ab.caride.saferoute.TelasJava.TarefaPost;
 
 public class UserController {
 
 
     private Context context;
     public ArrayList<Users> lista, lista_servidor;
-    //Database helper;
     SQLiteDatabase db;
     Cursor cursor;
     Calendar calendario;
@@ -30,26 +33,65 @@ public class UserController {
     Database helper;
 
 
+
+
     public UserController(Context context) {
         this.context = context;
         lista = new ArrayList<>();
         lista_servidor = new ArrayList<>();
 
-        //helper = new Database(this.context);
-        //db = helper.getWritableDatabase();
+        helper = new Database(this.context);
+        db = helper.getWritableDatabase();
 
         calendario = Calendar.getInstance();
         timeNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         timeNow.setTimeZone(TimeZone.getTimeZone("Brazil/East"));
 
-        //carregarLista();
+        carregarLista();
     }
 
-    /*public void carregarLista() {
+    public void SaveUser (String name, String user, String passapp, String passrota, String passemerg){
+
+        Users usuario = new Users();
+        usuario.name = name;
+        usuario.user  = user;
+        usuario.pass_app = passapp;
+        usuario.pass_rota = passrota;
+        usuario.pass_emergencia = passemerg;
+
+        lista_servidor.add(usuario);
+
+        SQLiteDatabase db = helper.getWritableDatabase();
+        try{
+            ContentValues cv = new ContentValues();
+            cv.put("name", usuario.name);
+            cv.put("user", usuario.user);
+            cv.put("passApp", usuario.pass_app);
+            cv.put("passSafe", usuario.pass_rota);
+            cv.put("passEmerg", usuario.pass_emergencia);
+
+            long id = db.insert("Usuarios", null, cv);
+            usuario.id = (int) id;
+        }finally {
+            db.close();
+        }
+    }
+
+    public void DeleteUser(Users user){
+
+        SQLiteDatabase db = helper.getWritableDatabase();
+        try{
+            db.delete("Usuarios","id = ?", new String[] {String.valueOf(user.id)});
+        }finally {
+            db.close();
+        }
+    }
+
+    public void carregarLista() {
 
         SQLiteDatabase db = helper.getReadableDatabase();
         try{
-            cursor = db.rawQuery("select * from users", null);
+            cursor = db.rawQuery("select * from usuarios", null);
 
             lista.clear();
             while (cursor.moveToNext()) {
@@ -58,34 +100,55 @@ public class UserController {
                 usuario.id = cursor.getInt(cursor.getColumnIndex("id"));
                 usuario.name = cursor.getString(cursor.getColumnIndex("name"));
                 usuario.user  = cursor.getString(cursor.getColumnIndex("user"));
-                usuario.password = cursor.getString(cursor.getColumnIndex("password"));
-                usuario.ultimaAlteracao = cursor.getString(cursor.getColumnIndex("ultimaAlteracao"));
+                usuario.pass_app = cursor.getString(cursor.getColumnIndex("passApp"));
+                usuario.pass_app = cursor.getString(cursor.getColumnIndex("passSafe"));
+                usuario.pass_app = cursor.getString(cursor.getColumnIndex("passEmerg"));
                 lista.add(usuario);
             }
             cursor.close();
         }finally {
             db.close();
         }
-    }*/
+    }
 
-    public String CriarJson(){
+
+    public void UpdateUser (Integer id_user, String name, String user, String passapp, String passrota, String passemerg){
+
+        Users usuario = new Users();
+        usuario.name = name;
+        usuario.user  = user;
+        usuario.pass_app = passapp;
+        usuario.pass_rota = passrota;
+        usuario.pass_emergencia = passemerg;
+
+
+        SQLiteDatabase db = helper.getWritableDatabase();
+        try{
+            ContentValues cv = new ContentValues();
+            cv.put("name", usuario.name);
+            cv.put("user", usuario.user);
+            cv.put("passApp", usuario.pass_app);
+            cv.put("passApp", usuario.pass_rota);
+            cv.put("passEmerg", usuario.pass_emergencia);
+
+            db.update("usuarios", cv,"id = ?", new String[] {String.valueOf(id_user)});
+
+        }finally {
+            db.close();
+        }
+    }
+
+    /*public String CriarJson(){
 
         String json;
         JSONObject obj = null;
         try {
-            /*obj = new JSONObject();
+            obj = new JSONObject();
             obj.put("id", user.id);
             obj.put("nome", user.name);
             obj.put("user", user.user);
             obj.put("senha", user.password);
-            obj.put("ultimaAlteracao", user.ultimaAlteracao);*/
-
-
-            obj = new JSONObject();
-            obj.put("id", "1");
-            obj.put("latitude", "111213231");
-            obj.put("longitude", "12313213");
-
+            obj.put("ultimaAlteracao", user.ultimaAlteracao);
 
         } catch (JSONException e1) {
             e1.printStackTrace();
@@ -93,30 +156,8 @@ public class UserController {
         json = obj.toString();
 
         return json;
-    }
+    }*/
 
-    public void SaveUser (String name, String user, String password){
-
-        Users usuario = new Users();
-        usuario.name = name;
-        usuario.user  = user;
-        usuario.password = password;
-//        usuario.ultimaAlteracao = timeNow.format(calendario.getTime());
-        lista_servidor.add(usuario);
-
-        SQLiteDatabase db = helper.getWritableDatabase();
-        try{
-            ContentValues cv = new ContentValues();
-            cv.put("name", usuario.name);
-            cv.put("user", usuario.user);
-            cv.put("password", usuario.password);
-//            cv.put("ultimaAlteracao", usuario.ultimaAlteracao);
-            long id = db.insert("Users", null, cv);
-            usuario.id = (int) id;
-        }finally {
-            db.close();
-        }
-    }
 
 
 

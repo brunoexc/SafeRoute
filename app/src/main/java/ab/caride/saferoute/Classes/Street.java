@@ -7,6 +7,7 @@ public class Street {
     public double lat;
     public double lng;
 
+    public Street(){}
 
     public Street(int id, String name, double lat, double lng) {
         this.id = id;

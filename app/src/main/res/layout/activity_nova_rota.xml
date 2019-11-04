@@ -6,14 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".TelasJava.NovaRota">
 
+    <Button
+        android:id="@+id/monitor_IoT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/teal_btc_button"
+        android:onClick="OnClickbuttonEnviaPost"
+        android:text="@string/monitor_IoT"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_menu_monitormanento" />
+
+    <Button
+        android:id="@+id/_teste_fora_da_rota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/teal_btc_button"
+        android:onClick="OnClickbuttonTesteForaRota"
+        android:text="@string/_teste_fora_da_rota"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monitor_IoT" />
+
     <TextView
-        android:id="@+id/tempo_1"
-        android:layout_width="387dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/titulo_menu_monitormanento"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="8dp"
-        android:text="Teste Envio Post"
+        android:layout_marginEnd="40dp"
+        android:text="@string/titulo_menu_monitormanento"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -23,46 +57,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="174dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="OnClickbuttonEnviaPost"
-        android:text="Enviar Post"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempo_1" />
-
-    <Button
-        android:id="@+id/_teste_fora_da_rota"
-        android:layout_width="174dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="OnClickbuttonTesteForaRota"
-        android:text="Teste Fora da Rota"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retornoURL" />
-
-    <TextView
-        android:id="@+id/retornoURL"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
-        android:text="Retorno"
-        android:textAlignment="center"
-        android:textSize="24sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="40dp"
+        android:layout_weight="60"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo_menu_monitormanento">
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

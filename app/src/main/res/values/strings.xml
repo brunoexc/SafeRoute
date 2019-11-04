@@ -40,6 +40,41 @@
         <item> "Cariaciaca x Vila Velha"</item>
         <item> "Vitória x Carapina"</item>
     </string-array>
+
+
+    <string-array name="SystemMessageDelete">
+        <item> "Você deseja excluir o usuário "</item>
+        <item> "Você deseja excluir o produto "</item>
+        <item> "Você deseja excluir o cliente "</item>
+    </string-array>
+
+
     <string name="but_senha_erase">-</string>
+    <string name="monitor_IoT">Monitoramento IoT</string>
+    <string name="_teste_fora_da_rota">Monitor Popup Senha</string>
+    <string name="titulo_menu_monitormanento">Ferramentas Monitoramento</string>
+    <string name="txt_title_AU_AdmUsuario">Administração de Usuário</string>
+    <string name="txt_subtitle_AU_UsuarioSelecionado">Usuário Selecionado</string>
+    <string name="txt_input_AU_UsuarioSelecionado">Selecione Usuário</string>
+    <string name="but_AU_Edit">Editar</string>
+    <string name="but_AU_Delete">Deletar</string>
+    <string name="txt_subtitle_AU_ListaUsuarios">Lista de Usuários</string>
+    <string name="but_AU_Criar">Criar</string>
+    <string name="txt_LUL_title_IDUsuario">ID</string>
+    <string name="txt_LUL_title_NomeUsuario">Nome</string>
+    <string name="txt_LUL_title_Usuario">Login</string>
+    <string name="txt_title_CE_Usuario">Cadastro de Usuário</string>
+    <string name="txt_NomeUsuario">Nome:</string>
+    <string name="txt_Login">Login:</string>
+    <string name="txt_PasswordApp">Senha App:</string>
+    <string name="txt_PasswordRota">Senha Rota:</string>
+    <string name="txt_PasswordEmergencia">Senha Emergência:</string>
+    <string name="but_Cadastrar">Cadastrar</string>
+    <string name="txt_input_NomeUsuario" />
+    <string name="txt_input_LoginApp" />
+    <string name="txt_input_PassAppUsuario" />
+    <string name="txt_input_PassRotaUsuario" />
+    <string name="txt_input_PassEmergUsuario" />
+    <string name="txt_LUL_UserID" />
 
 </resources>

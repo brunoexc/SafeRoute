@@ -77,8 +77,12 @@ public class TarefaPost extends AsyncTask<String, Void, Integer> {
 
 
             case 1:
-                url = new URL("http://"+ ipServidor +":"+ portaServidor +"/rotas");
+                // url = new URL("http://"+ ipServidor +":"+ portaServidor +"/usuarios");
+                // url = new URL("http://httpbin.org/post");
+                url = new URL("https://poc-iot-labs.azure-devices.net/devices/poc-iot-device-2/messages/events?api-version=2016-02-03");
+
                 urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestProperty("Authorization", "SharedAccessSignature sr=poc-iot-labs.azure-devices.net&sig=je3g1FYzl7JjdT1o869lwCsEG4kMv2QX59Z%2BxOU2DQA%3D&se=1603143321&skn=iothubowner");
                 urlConnection.setRequestMethod("POST");//
                 urlConnection.setReadTimeout(15000);
                 urlConnection.setConnectTimeout(15000);

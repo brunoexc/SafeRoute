@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VisaoMonitoramento"></activity>
+        <activity android:name=".ConsultarRota"></activity>
+        <activity android:name=".UsuarioCE" />
+        <activity android:name=".AdministracaoUsuario" />
+        <activity android:name=".VisaoMonitoramento" />
         <activity android:name=".VisaoCarro" />
         <activity android:name=".VisaoCasa" />
         <activity android:name=".TelasJava.AdministrarRota" />
