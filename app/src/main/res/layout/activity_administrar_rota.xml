@@ -14,7 +14,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
-        android:text="Rota Segura App"
+        android:text="Administração de Rotas"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="30sp"
